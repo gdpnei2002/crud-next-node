@@ -1,28 +1,26 @@
 import type { NextPage } from 'next'
-import styles from "./styles.module.scss";
-
 
 const Home: NextPage = () => {
   return (
     <>
-    <div className="app-container">
-      <div className="register--container">
+    <div className="appcontainer">
+      <div className="registercontainer">
           <h1>crud</h1>
           <input
             type="text"
             name="name"
             placeholder="nome"
-            className="register--input" />
+            className="registerinput" />
           <input
             type="text"
             name="cost"
             placeholder="preço"
-            className="register--input" />
+            className="registerinput" />
           <input
             type="text"
             name="category"
             placeholder="categoria"
-            className="register--input" />
+            className="registerinput" />
           <button>
             cadastrar
           </button>
