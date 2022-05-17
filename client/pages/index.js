@@ -2,7 +2,6 @@ import React, {useState, useEffect } from 'react';
 import Axios from "axios"
 import Card from '../components/cards/card';
 
-
 export default function Home() {
 
   const [values, setValues] = useState();
@@ -57,7 +56,7 @@ useEffect(() =>{
         onClick={()=>handleClickButton()}>
           Cadastrar
       </button>
-      </div>
+    </div>
       {typeof listGames !=="undefined" &&
           listGames.map((value) => {
             return(
