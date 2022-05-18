@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body{
+  background-color: #0d1117;
+}
+
 .app-container {
   display: flex;
   align-items: center;
@@ -13,25 +17,31 @@
   padding: 10px 20px;
   width: max-content;
   height: max-content;
-
   margin-top: 20px;
-  border: 3px solid black;
+  border: 1px solid #31363c;
   border-radius: 5px;
 }
 
 .register-title {
   text-align: center;
   margin-bottom: 20px;
-  font-family: fantasy;
-  color: blue;
+  font-family:Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 .register-input {
   display: block;
   margin: 10px auto;
   padding: 7px 0;
+  border-radius: 10px;;
 }
 
 .register-button {
-  padding: 2px 5px;
+  border: solid;
+  border-radius: 5px;
+  background-color: #0d1117;
+  color: white;
+  border-color: #1a79e5;
+  font-size: 1rem;
+  cursor: pointer;
 }

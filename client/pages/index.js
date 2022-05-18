@@ -36,19 +36,19 @@ useEffect(() =>{
         <input 
           type="text" 
           name="name" 
-          placeholder="Nome" 
+          placeholder=" Nome" 
           className="register-input"
           onChange={handleChangeValues}/>
       <input 
         type="text" 
         name="cost" 
-        placeholder="Preço" 
+        placeholder=" Preço" 
         className="register-input"
         onChange={handleChangeValues}/>
       <input 
         type="text" 
         name="category" 
-        placeholder="Categoria" 
+        placeholder=" Categoria" 
         className="register-input"
         onChange={handleChangeValues}/>
       <button 

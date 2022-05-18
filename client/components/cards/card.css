@@ -1,7 +1,6 @@
 .card-container {
     width: 250px;
-  
-    border: 3px solid #000000;
+    border: 1px solid #31363c;
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
@@ -12,22 +11,27 @@
     display: inline-block;
     margin-right: 10px;
     margin-top: 5px;
-    background-color: black;
     border-radius: 5px;
     color: white;
     font-weight: 700;
     padding: 3px;
-    font-family: monospace;
+    font-family:Arial, Helvetica, sans-serif;
   }
   
   .card-title {
     display: inline;
+    color: #bdd6e3;
   }
   
   .card-cost {
     margin-top: 15px;
+    color: #bdd6e3;
   }
   
   .card-container:hover {
-    background-color: aqua;
+    background-color: #202125;
+  }
+
+  .card-cartegory{
+    color: #bdd6e3;
   }
