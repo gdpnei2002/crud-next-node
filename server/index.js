@@ -13,6 +13,8 @@ const db = mysql.createPool({
 app.use(cors());
 app.use(express.json());
 
+// GAMESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+
 app.post("/register", (req, res)=>{
     const{name} = req.body;
     const{cost} = req.body;
@@ -61,12 +63,26 @@ app.delete("/delete/:id", (req, res) => {
   });
 
 
+//    CATEGORYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+
   app.get("/getCardsCategory", (req, res) =>{
     let SQL = "SELECT * from category";
 
     db.query(SQL, (err, result) =>{
         if (err) console.log(err);
         else res.send(result)
+    })
+})
+
+app.post("/registerCategory", (req, res)=>{
+    const{name} = req.body;
+    const{cost} = req.body;
+    const{category} = req.body;
+
+    let SQL = "INSERT INTO category (name)  VALUES ( ?)";
+
+    db.query(SQL, [name], (err, result) => {
+        console.log(err);
     })
 })
 
