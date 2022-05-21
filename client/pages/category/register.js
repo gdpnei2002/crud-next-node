@@ -4,7 +4,7 @@ import Axios from "axios"
 export default function Home() {
 
   const [values, setValues] = useState();
-  const [listGames, setListGames] = useState();
+  const [listCategory, setListCategory] = useState();
 
   const handleChangeValues = (value) =>{
     setValues(prevValue=>({
@@ -24,7 +24,7 @@ const handleClickButton = () =>{
 
 useEffect(() =>{
   Axios.get("http://localhost:3001/getCards").then((response) =>{
-    setListGames(response.data);
+    setListCategory(response.data);
   })
 },[])
 

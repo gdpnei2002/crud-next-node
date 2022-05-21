@@ -60,6 +60,16 @@ app.delete("/delete/:id", (req, res) => {
     });
   });
 
+
+  app.get("/getCardsCategory", (req, res) =>{
+    let SQL = "SELECT * from category";
+
+    db.query(SQL, (err, result) =>{
+        if (err) console.log(err);
+        else res.send(result)
+    })
+})
+
 app.listen(3001, ()=>{
     console.log("rodando servidor");
 });
