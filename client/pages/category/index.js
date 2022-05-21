@@ -1,6 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import Axios from "axios"
-import Card from '../../components/cards/card';
+import CardCategory from '../../components/cards/cardCategory';
 
 export default function Home() {
 
@@ -47,14 +47,14 @@ useEffect(() =>{
           {typeof listCategory !=="undefined" &&
               listCategory.map((value) => {
                 return(
-                    <Card
+                    <CardCategory
                     key={value.id}
                     listCard={listCategory}
                     setListCategory={setListCategory}
                     id={value.idcategory}
                     name={value.name}
                     >
-                  </Card>
+                  </CardCategory>
                 )
               })}
         </div>

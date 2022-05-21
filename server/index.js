@@ -76,8 +76,6 @@ app.delete("/delete/:id", (req, res) => {
 
 app.post("/registerCategory", (req, res)=>{
     const{name} = req.body;
-    const{cost} = req.body;
-    const{category} = req.body;
 
     let SQL = "INSERT INTO category (name)  VALUES ( ?)";
 
@@ -85,6 +83,18 @@ app.post("/registerCategory", (req, res)=>{
         console.log(err);
     })
 })
+
+app.delete("delete/:id", (req, res) => {
+    const { id } = req.params;
+    let SQL = "DELETE FROM category WHERE idcategory = ?";
+    db.query(SQL, [id], (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    });
+  });
 
 app.listen(3001, ()=>{
     console.log("rodando servidor");
