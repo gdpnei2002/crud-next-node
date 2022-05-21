@@ -84,6 +84,18 @@ app.post("/registerCategory", (req, res)=>{
     })
 })
 
+app.put("/edit", (req, res) =>{
+    const {id} = req.body;
+    const {name} = req.body;
+
+    let SQL = "UPDATE category SET name = ? WHERE idcategory = ?";
+
+    db.query(SQL, [name, id],(err, result) => {
+        if(err) console.log(err);
+        else res.send(result);
+    })
+})
+
 app.delete("delete/:id", (req, res) => {
     const { id } = req.params;
     let SQL = "DELETE FROM category WHERE idcategory = ?";

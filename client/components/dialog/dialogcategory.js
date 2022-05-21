@@ -24,7 +24,7 @@ export default function FormDialog(props) {
     props.setOpen(false);
   };
 
-  const handleEditGame = () => {
+  const handleEditCategory = () => {
     Axios.put("http://localhost:3001/edit", {
       id: editValues.id,
       name: editValues.name,
@@ -70,7 +70,7 @@ export default function FormDialog(props) {
           <Button color="primary" onClick={() => handleDeleteCategory()}>
             Excluir
           </Button>
-          <Button color="primary" onClick={() => handleEditGame()}>
+          <Button color="primary" onClick={() => handleEditCategory()}>
             Salvar
           </Button>
         </DialogActions>
