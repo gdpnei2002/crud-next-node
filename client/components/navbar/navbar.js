@@ -6,8 +6,10 @@ export default function Navbar() {
             <div className="App">
                 <div className="topnav">
                     <a href=".">Home</a>
-                    <a href="register">Registrar</a>
-                    <a href="list">Lista de produtos</a>
+                    <a href="../games">Games</a>
+                    <a href="../category">Categoria</a>
+                    <a href="../games/register">Registrar Jogos</a>
+                    <a href="../games/list">Listar jogos</a>
                 </div>
             </div>
         </>
